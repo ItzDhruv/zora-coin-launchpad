@@ -125,7 +125,7 @@ const CreateCoinComponent = () => {
     setError(null);
 
     try {
-      const contractCallParams = createCoinCall(coinParams, walletClient, publicClient);
+      const contractCallParams = createCoinCall(coinParams);
       const txHash = await writeContractAsync(contractCallParams);
       console.log("Transaction hash:", txHash);
 

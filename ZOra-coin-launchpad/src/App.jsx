@@ -3,6 +3,7 @@ import * as React from "react";
 import { createCoinCall } from "@zoralabs/coins-sdk";
 import { useWriteContract, useSimulateContract } from "wagmi";
 import CreateCoinComponent from "./CreateCoinComponent.jsx";
+import CreateToken from './CreateToken.jsx';
 
 function App() {
   const account = useAccount();
@@ -100,6 +101,7 @@ function App() {
           <div style={styles.createb}>
 
           <CreateCoinComponent />
+          <CreateToken />
           </div>
         </div>
 

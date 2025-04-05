@@ -3,7 +3,7 @@ import { mainnet, sepolia, zora, zoraTestnet, baseSepolia} from 'wagmi/chains'
 import { coinbaseWallet, injected, walletConnect } from 'wagmi/connectors'
 
 export const config = createConfig({
-  chains: [baseSepolia],
+  chains: [baseSepolia, zoraTestnet],
   connectors: [
     injected(),
     coinbaseWallet(),
@@ -11,6 +11,7 @@ export const config = createConfig({
   ],
   transports: {
     [baseSepolia.id]: http(),
+    [zoraTestnet.id]: http(),
   },
 })
 
